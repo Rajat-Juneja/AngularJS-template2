@@ -14,6 +14,7 @@ body{
     position: fixed;
     width: 100%;
     transition: 0.5s ease-in-out;
+    z-index: 9999;
 }
 
 .navbar a.left{
@@ -182,6 +183,8 @@ background-color: white;
     padding-top: 350px;
     padding-bottom: 350px;
     position: relative;
+    margin-bottom: 10%;
+    margin-top: 5%;
 }
 
 .floating h1, .floating p{
@@ -314,7 +317,7 @@ div.floating div.f1::after{
 }
 
 .floating .f7{
-    top: 40%;
+    top: 0%;
     left: 70%;
     padding: 2.2% 2.2%;
 }
@@ -328,4 +331,132 @@ div.floating div.f1::after{
     background-image: url(floating.jpg);
     height: 120px;
     width: 150px;
+}
+
+.services .topser{
+    margin-bottom: 8%;
+}
+
+.services img{
+    height: 600px;
+}
+
+.services .servicesmid{
+    width: 100%;
+    text-align: center;
+}
+
+
+i.fa-heart{
+    color: #EF4C80;
+    font-size: 25px;
+    text-align: right;
+}
+
+.services .servicesmid .tagline h4{
+    color: #EF4C80;
+    text-align: left;
+}
+
+.services .servicesmid h1{
+    margin-top: 10%;
+    margin-bottom: 5%;
+    letter-spacing: 5px;
+}
+
+.services .servicesmid p{
+    letter-spacing: 2px;
+    word-spacing: 8px;
+    line-height: 28px;
+    margin-bottom: 8%;
+    /* font-weight: 100; */
+}
+
+.services .servicesmid p.query{
+    font-size: 24px;
+}
+
+.services .servicesmid h3{
+    font-weight: 700;
+    word-spacing: 15px;
+}
+
+.services .boxes .serbox .box1, .services .boxes .serbox .box2{
+    text-align: center;
+    margin: 2% 15%;
+    padding: 5% 10%;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 10px;
+    background-color: white;
+}
+
+
+.services .boxes .box1:first-child{
+border-top: 8px solid #42A5F5;
+}
+
+.services .boxes .box2:first-child{
+    border-top: 8px solid #EF4C80;
+}
+
+.services .boxes .serbox h1{
+    font-size: 34px;
+}
+
+.services .boxes .serbox p{
+    font-size: 18px;
+    margin-bottom: 10%;
+    /* margin-top: 5%; */
+}
+
+.services .boxes .serbox .box1 a{
+    text-decoration: none;
+    padding: 4% 8%;
+    border-radius: 25px;
+    color: rgba(255,255,255,0.9);
+    background-color: #42A5F5;
+}
+
+.services .boxes .serbox .box2 a{
+    text-decoration: none;
+    padding: 4% 8%;
+    border-radius: 25px;
+    color: rgba(255,255,255,0.9);
+    background-color: #EF4C80;
+}
+
+.services .boxes .serbox a:hover{
+    opacity: 0.9;
+}
+
+
+
+@media(min-width:992px){
+    div.services{
+        position: relative;
+    }
+
+    div.boxes{
+        position: absolute;
+        top: 100%;
+        transform: translate(0,-75%);
+    }
+
+    div.boxes .box1{
+        transition: 0.5s ease-in-out;
+        transform: rotateZ(-10deg);
+    }
+
+    div.boxes .box2{
+        transition: 0.5s ease-in-out;
+        transform: rotateZ(10deg);
+    }
+
+    div.boxes .box1:hover{
+        transform: rotateZ(10deg) !important;
+    }
+
+    div.boxes .box2:hover{
+        transform: rotate(-10deg) !important;
+    }
 }
