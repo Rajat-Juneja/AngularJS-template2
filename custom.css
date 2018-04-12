@@ -655,7 +655,7 @@ div.last h1{
 }
 
 div.last a{
-    padding: 2%;
+    margin: 2%;
     /* border-radius: 50%; */
     text-decoration: none;
 }
