@@ -583,6 +583,7 @@ border-top: 8px solid #42A5F5;
     top: 100%;
     right: 0;
     transform: translate(0,-50%);
+    z-index: 1;
 }
 
 
@@ -716,7 +717,7 @@ div.last h6{
     }
 
     body{
-        overflow: hidden;
+        overflow-x: hidden;
     }
     
     footer::before{
