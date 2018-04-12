@@ -430,37 +430,6 @@ border-top: 8px solid #42A5F5;
 }
 
 
-
-@media(min-width:992px){
-    div.services{
-        position: relative;
-    }
-
-    div.boxes{
-        position: absolute;
-        top: 100%;
-        transform: translate(0,-75%);
-    }
-
-    div.boxes .box1{
-        transition: 0.5s ease-in-out;
-        transform: rotateZ(-10deg);
-    }
-
-    div.boxes .box2{
-        transition: 0.5s ease-in-out;
-        transform: rotateZ(10deg);
-    }
-
-    div.boxes .box1:hover{
-        transform: rotateZ(10deg) !important;
-    }
-
-    div.boxes .box2:hover{
-        transform: rotate(-10deg) !important;
-    }
-}
-
 .slant{
     margin-top: 15%;
     background-color: #EF4C80;
@@ -618,6 +587,161 @@ border-top: 8px solid #42A5F5;
 
 
 footer{
-    height: 500px;
+    /* height: 500px; */
     background: linear-gradient(135deg, #6749f5 0%, #25ced1 100%);
+    padding-top: 150px;
+    position: relative;
+    padding-bottom: 50px;
+    color: white;
+    text-align: center;
+    /* overflow-x: hidden; */
+    /* overflow-y: visible; */
+}
+
+footer h1{
+    word-spacing: 8px;
+    letter-spacing:3px;
+    margin-bottom: 3%;
+    
+}
+
+footer h5{
+    word-spacing: 5px;
+    letter-spacing: 1px;
+    line-height: 28px;
+}
+
+footer h5:last-of-type{
+    margin-bottom: 3.5%;
+}
+
+footer a{
+    text-decoration: none;
+    background-color: #58D9B0;
+    padding: 1% 3%;
+    border-radius: 30px;
+    color: white;
+}
+
+footer a:hover{
+    color: white;
+    text-decoration: none;
+}
+
+footer p{
+    margin-top: 4%;
+    font-size: 18px;
+}
+
+footer p i{
+    font-size: 24px !important;
+    color: #FBC036;
+}
+
+div.last{
+    margin-top: 10%;
+    padding-bottom: 100px;
+    text-align: center;
+}
+
+div.last img{
+    margin-bottom: 2%;
+}
+
+div.last h1{
+    margin-bottom: 5%;
+    text-shadow: 1px 1px 9px black;
+}
+
+div.last a{
+    padding: 2%;
+    /* border-radius: 50%; */
+    text-decoration: none;
+}
+
+div.last a i{
+    font-size: 40px;
+}
+
+div.last a i.fa-facebook-official{
+    color:#3b5998;
+    background-color: white;
+}
+
+div.last a i.fa-github{
+    color: #333;
+}
+
+div.last a i.fa-linkedin-square{
+    background-color: white;
+    color: #0077B5;
+}
+
+div.last i.fa-heart{
+    color: #E93061;
+}
+div.last h6{
+    margin-top: 5%;
+}
+
+
+
+@media(min-width:992px){
+    div.services{
+        position: relative;
+    }
+
+    div.boxes{
+        position: absolute;
+        top: 100%;
+        transform: translate(0,-75%);
+    }
+
+    div.boxes .box1{
+        transition: 0.5s ease-in-out;
+        transform: rotateZ(-10deg);
+    }
+
+    div.boxes .box2{
+        transition: 0.5s ease-in-out;
+        transform: rotateZ(10deg);
+    }
+
+    div.boxes .box1:hover{
+        transform: rotateZ(10deg) !important;
+    }
+
+    div.boxes .box2:hover{
+        transform: rotate(-10deg) !important;
+    }
+
+    body{
+        overflow: hidden;
+    }
+    
+    footer::before{
+        content: '';
+        display: inline-block;
+        position: absolute;
+        width: 50%;
+        height: 200px;
+        background-size: 100% 100%;
+        background-image: url(fleft.png);
+        top: 100%;
+        transform: translate(0,-50%);
+        left: 0;
+    }
+    footer::after{
+        content: '';
+        display: inline-block;
+        position: absolute;
+        width: 50%;
+        height: 250px;
+        background-size: 100% 100%;
+        background-image: url(fright.png);
+        top: 100%;
+        transform: translate(0,-40%);
+        right: -18%;
+    }
+
 }
