@@ -57,7 +57,7 @@ body{
 
 .navbar .collapse .dropdown .dropdown-menu a{
 margin: 2% 0;
-
+text-align: center;
 }
 
 
@@ -68,11 +68,11 @@ margin: 2% 0;
 
 @keyframes anim{
     0%{
-        transform-origin: right;
+        transform-origin:left;
         transform: scale(1,1);
     }
     25%{
-        transform-origin: left;
+        transform-origin: right;
         transform: scale(1.2,1);
     }
     50%{
@@ -84,7 +84,7 @@ margin: 2% 0;
         transform: scale(1,1.2);
     }
     100%{
-        transform-origin: center;
+        transform-origin: left;
         transform: scale(1,1);
     }
 }
@@ -459,4 +459,165 @@ border-top: 8px solid #42A5F5;
     div.boxes .box2:hover{
         transform: rotate(-10deg) !important;
     }
+}
+
+.slant{
+    margin-top: 15%;
+    background-color: #EF4C80;
+    transform: skewY(-8deg);
+    padding-top: 150px;
+    padding-bottom: 150px;
+    margin-bottom: 10%;
+}
+
+.slant div.row.container{
+    margin: 0;
+}
+
+.slant .imag{
+    background-image: url(slant.png);
+    background-size: 100% 100%;
+    position: relative;
+    height: 662px;
+    transform: skewY(8deg);
+    /* height: 100%; */
+}
+
+.slant .hovering{
+    position: absolute;
+    left: 80%;
+    top: 100%;
+    /* transform: translate(-100%) !important; */
+    background-color: #58D9B0;
+    border-radius: 50%;
+    height: 25%;
+    width: 30%;
+    text-align: center;
+    color: white;
+    box-shadow: 0px 7px 19px -3px rgba(0,0,0,0.8);
+}
+
+.slant .hovering h3{
+    margin-top: 10%;
+    letter-spacing: 3px;
+}
+
+.slant .hovering p{
+    letter-spacing: 1.5px;
+}
+
+
+.slant .imagtext{
+    transform: skewY(8deg);
+    text-align: center;
+    padding: 13% 0% 0 8%;;
+}
+
+.slant .imagtext p{
+    font-size: 30px;
+    letter-spacing: 2px;
+    margin-bottom: 8%;
+}
+
+.slant .imagtext i{
+    margin-left: 3%;
+}
+
+.slant .imagtext h5{
+    color: white;
+    font-size: 30px;
+    letter-spacing: 2px;
+    line-height: 40px;
+    word-spacing: 10px;
+}
+
+
+
+.option{
+    /* height: 500px; */
+    position: relative;
+    padding-top: 100px;
+    padding-bottom: 200px;
+    /* background-color: black; */
+}
+
+.option .text{
+    text-align: left;
+    padding-right: 10%;
+    padding-top: 10%;
+}
+
+.option .text h1{
+    font-size: 50px;
+}
+
+.option .text h6{
+    margin-top: 10%;
+    font-size: 22px;
+    letter-spacing: 1px;
+    line-height: 32px;
+}
+
+.option .box01{
+    background-color: #F6F7F9;
+    padding: 8% 5%;
+    text-align: left;
+    color: #4C4B58;
+    box-shadow: 0px 7px 16px -7px black;
+    transition: 0.3s ease-in-out;
+}
+
+.option .box01:hover{
+    box-shadow: 0px 7px 27px -3px black;
+}
+
+.option .box01 h5{
+    font-size: 28px;
+    letter-spacing: 1.5px;
+    word-spacing: 8px;
+}
+
+.option .box01 p{
+    margin-top: 2.5%;
+    word-spacing: 5px;
+    letter-spacing: 0.5px;
+    margin-bottom: 7%;
+}
+
+.option .box01 a{
+    text-decoration: none;
+    background-color: #4b71fc;
+    border-radius: 30px;
+    letter-spacing: 2px;
+    color: white;
+    padding: 2% 7%;
+    transition: 0.4s ease;
+}
+
+.option .box01 a:hover{
+    opacity: 0.8;
+}
+
+.option .box01:first-of-type{
+    margin-bottom: 5%;
+}
+
+.option .bleft{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    transform: translate(0,-100%);
+}
+
+.option .bright{
+    position: absolute;
+    top: 100%;
+    right: 0;
+    transform: translate(0,-50%);
+}
+
+
+footer{
+    height: 500px;
+    background: linear-gradient(135deg, #6749f5 0%, #25ced1 100%);
 }
