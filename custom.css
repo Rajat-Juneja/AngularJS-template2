@@ -994,6 +994,10 @@ div.last h6{
     .navbar ul li a.smallhide{
         display: block;
     }
+    
+        .services .boxes .serbox .box1, .services .boxes .serbox .box2{
+        margin: 2% 5%;
+    }
 
 }
 
