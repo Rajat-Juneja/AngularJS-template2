@@ -745,10 +745,10 @@ div.last h6{
     div.boxes .box2:hover{
         transform: rotate(-10deg) !important;
     }
-
+/* 
     body{
         overflow-x: hidden;
-    }
+    } */
 
     footer::before{
         content: '';
