@@ -3,9 +3,13 @@
     /* font-family: 'Galada', cursive; */
 }
 
+html{
+    overflow-x: hidden;
+}
+
 body{
     margin: 0;
-    
+    /* overflow-x: hidden; */
     font-family: 'Galada', cursive;
     padding: 0;
 }
@@ -672,19 +676,6 @@ div.last h6{
     margin-top: 5%;
 }
 
-footer::before{
-    content: '';
-    display: inline-block;
-    position: absolute;
-    width: 50%;
-    height: 200px;
-    background-size: 100% 100%;
-    background-image: url(fleft.png);
-    top: 100%;
-    transform: translate(0,-50%);
-    
-}
-
 
 
 
@@ -760,9 +751,17 @@ footer::before{
     }
 
     footer::before{
-        left: 0;
-    }
-    
+        content: '';
+        display: inline-block;
+        position: absolute;
+        width: 50%;
+        height: 200px;
+        background-size: 100% 100%;
+        background-image: url(fleft.png);
+        top: 100%;
+        transform: translate(0,-50%);
+        left:0;
+    }    
     
     footer::after{
         content: '';
@@ -861,6 +860,10 @@ footer::before{
         height: 80px;
         width: 120px;
     }
+    body{
+        overflow-x: hidden;
+    }
+
 
     
     .hide{
@@ -884,19 +887,6 @@ footer::before{
     width: 38%;
     }
 
-    footer{
-        padding-bottom: 120px;
-    }
-
-    footer::before{
-        left: 40%;
-        width: 70%;
-        transform: translate(-15%,-50%);
-    }
-
-    div.last{
-        margin-top: 18%;
-    }
 }
 
 @media(max-width:768px){
@@ -944,14 +934,13 @@ footer::before{
         padding-bottom: 250px;
     }
 
-    footer::before{
-        width: 90%;
-        transform: translate(-16%,-50%);
-    }
-
 }
 
 @media(max-width:576px){
+
+    /* .navbar{
+        width: 95%;
+    } */
 
     .navbar a.left img{
         width: 150px;;
@@ -1002,18 +991,9 @@ footer::before{
         display: none;
     }
 
-    footer::before{
-        height: 160px;
-    }
-
-    div.last{
-        margin-top: 25%;
-    }
-
     .navbar ul li a.smallhide{
         display: block;
     }
-
 
 }
 
@@ -1075,10 +1055,6 @@ footer::before{
 
     .option .text h1{
         font-size: 40px;
-    }
-
-    footer::before{
-        height: 120px;
     }
 
 
