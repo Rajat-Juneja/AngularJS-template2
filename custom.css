@@ -4,10 +4,10 @@
 }
 
 body{
-    margin: 0px;
+    margin: 0;
     
     font-family: 'Galada', cursive;
-    padding: 0px;
+    padding: 0;
 }
 
 .navbar{
@@ -21,12 +21,9 @@ body{
     margin-left: 3%;
 }
 
-.navbar a.leftright{
-    display: none;
-}
-
 .navbar .collapse{
     margin-left: 5%;
+    /* text-align: center; */
 }
 
 .navbar ul{
@@ -45,6 +42,10 @@ body{
 
 .navbar .collapse ul li a:hover{
     color: #58D9B0 !important;
+}
+
+.navbar ul li a.smallhide{
+    display: none;
 }
 
 .navbar .collapse .dropdown .dropdown-menu{
@@ -104,27 +105,8 @@ text-align: center;
 }
 
 .navbar a.design:hover{
-animation: anim2 0.3s ease;
 color: #58D9B0;
 background-color: white;
-}
-
-@keyframes anim2{
-    0%{
-        margin-right: 5%;
-    }
-    25%{
-        margin-right: 4.8%;
-    }
-    50%{
-        margin-right: 5%;
-    }
-    75%{
-        margin-right: 5.2%;
-    }
-    100%{
-        margin-right: 5%;
-    }
 }
 
 .topcontent{
@@ -159,19 +141,19 @@ background-color: white;
 
 .topcontent img{
     margin: 7% 0;
+    width:
+    100%;
 }
 
 .below{
     box-shadow: 0px 0px 80px -15px black;
     background-color: white !important;
-    padding-top: 0.5%;
+    
 }
 
 .above{
     border-bottom: none;
     background-color: transparent !important;
-    
-    padding-top: 2.5%;
 }
 
 
@@ -187,10 +169,14 @@ background-color: white;
     margin-top: 5%;
 }
 
+.floating .container{
+    z-index: 10;
+}
+
 .floating h1, .floating p{
     transform: skewY(3deg);
     text-align: center;
-
+    z-index: 10;
 }
 
 .floating h1{
@@ -338,6 +324,7 @@ div.floating div.f1::after{
 }
 
 .services img{
+    padding: 0;
     height: 600px;
 }
 
@@ -646,7 +633,7 @@ div.last{
 }
 
 div.last img{
-    margin-bottom: 2%;
+    margin-bottom: 5%;
 }
 
 div.last h1{
@@ -685,9 +672,61 @@ div.last h6{
     margin-top: 5%;
 }
 
+footer::before{
+    content: '';
+    display: inline-block;
+    position: absolute;
+    width: 50%;
+    height: 200px;
+    background-size: 100% 100%;
+    background-image: url(fleft.png);
+    top: 100%;
+    transform: translate(0,-50%);
+    
+}
+
+
 
 
 @media(min-width:992px){
+
+    .navbar a.leftright{
+        display: none;
+    }
+    
+    
+    .below{
+    padding-top: 0.5%;
+    }
+
+    .above{
+        padding-top: 2.5%;
+    }
+
+
+    .navbar a.design:hover{
+        animation: anim2 0.3s ease;
+    }
+
+    
+@keyframes anim2{
+    0%{
+        margin-right: 5%;
+    }
+    25%{
+        margin-right: 4.8%;
+    }
+    50%{
+        margin-right: 5%;
+    }
+    75%{
+        margin-right: 5.2%;
+    }
+    100%{
+        margin-right: 5%;
+    }
+}
+
     div.services{
         position: relative;
     }
@@ -719,19 +758,12 @@ div.last h6{
     body{
         overflow-x: hidden;
     }
-    
+
     footer::before{
-        content: '';
-        display: inline-block;
-        position: absolute;
-        width: 50%;
-        height: 200px;
-        background-size: 100% 100%;
-        background-image: url(fleft.png);
-        top: 100%;
-        transform: translate(0,-50%);
         left: 0;
     }
+    
+    
     footer::after{
         content: '';
         display: inline-block;
@@ -744,5 +776,311 @@ div.last h6{
         transform: translate(0,-40%);
         right: -18%;
     }
+
+}
+
+@media(max-width:1200px){
+    .navbar ul li{
+        margin: 0 1%;
+    }
+    .slant div.row.container{
+        padding-right: 0;
+    }
+
+    .option .text{
+        padding-top: 7%;
+    }
+
+    .option .box{
+        padding: 0;
+    }
+}
+
+
+
+
+@media(max-width:991px){
+
+    .navbar{
+        text-align: center;
+    }
+
+    .navbar a.right{
+        display: none;
+    }
+
+    .navbar a.leftright{
+        margin-left: 42%;
+    }   
+
+    .navbar .collapse{
+        /* text-align: center; */
+        margin:0;
+        background-color: white;
+    }
+
+    div.f5, div .f6{
+    display: none;
+    }
+
+    .floating{
+        padding-bottom: 200px;
+        padding-top: 200px;
+    }
+
+    .floating .f1{
+        top:25%;
+        left:10%;
+    }
+
+    .floating .f3{
+        padding: 2.3% 3%;
+    }
+
+    .floating .f3::after{
+        width: 55px;
+        height: 40px;
+    }
+
+    .floating .f4{
+        top: 70%;
+        padding: 2.1% 1.5%;
+    }
+    .floating .f4::after{
+        width:55px;
+        height: 35px;
+    }
+
+
+    .floating .f7{
+        top:10%;
+        padding: 3% 2.5%;
+    }
+
+    .floating .f7::after{
+        height: 80px;
+        width: 120px;
+    }
+
+    
+    .hide{
+        display: none;
+    }
+
+    .services .container{
+        padding: 0;
+    }
+
+    .slant .imagtext h5{
+        font-size: 24px;
+    letter-spacing: 1.5px;
+    word-spacing: 8px;
+    line-height: 35px;
+    }
+
+    .slant .hovering{
+        left: 75%;
+        height: 23%;
+    width: 38%;
+    }
+
+    footer{
+        padding-bottom: 120px;
+    }
+
+    footer::before{
+        left: 40%;
+        width: 70%;
+        transform: translate(-15%,-50%);
+    }
+
+    div.last{
+        margin-top: 18%;
+    }
+}
+
+@media(max-width:768px){
+    .navbar a.leftright{
+        margin-left: 25%;
+    }
+
+    .topcontent h1{
+        font-size: 36px;
+    }
+    
+    .floating .f7{
+        padding: 4% 3.5%;
+    }
+
+    .floating .f7::after{
+        width:100px;
+        height: 70px;
+    }
+
+    .floating .f3{
+        left: 75%;
+    }
+
+    .slant{
+        padding-bottom: 120px;
+        padding-top: 120px;
+    }
+
+    .slant .imagtext{
+        padding: 15% 0 0;
+    }
+
+    .slant .hovering{
+        height: 25%;
+    left: 30%;
+    top: 135%;
+    }
+
+    .slant .container, .slant .container .imag{
+        padding: 0;
+    }
+
+    .option{
+        padding-bottom: 250px;
+    }
+
+    footer::before{
+        width: 90%;
+        transform: translate(-16%,-50%);
+    }
+
+}
+
+@media(max-width:576px){
+
+    .navbar a.left img{
+        width: 150px;;
+    }
+
+    .navbar a.leftright{
+        margin-left: 0%;
+        font-size: 16px;
+    }
+
+    .topcontent h1{
+        font-size: 28px;
+        margin-top: 15%;
+    }
+
+    .floating{
+        padding-bottom: 150px;
+        padding-top: 150px;
+    }
+
+    .floating h1, .floating p{
+        padding: 0 20%;
+    }
+
+    .floating .f1{
+        left: 5%;
+        padding: 4% 1%;
+    }
+
+    .floating .f2{
+        padding: 4% 4%;
+    }
+
+    .floating .f2::after{
+        width: 90px;
+        height: 70px;
+    }
+
+    .f7{
+        display: none;
+    }
+
+    .floating .f4{
+        top: 80%;
+    }
+
+    .hide2{
+        display: none;
+    }
+
+    footer::before{
+        height: 160px;
+    }
+
+    div.last{
+        margin-top: 25%;
+    }
+
+    .navbar ul li a.smallhide{
+        display: block;
+    }
+
+
+}
+
+@media(max-width:450px){
+
+    .navbar a.leftright{
+        margin-left: 0%;
+        font-size: 14px;
+    }
+
+    .topcontent h1{
+        font-size: 24px;
+    }
+
+    .topcontent p{
+        font-size: 15px;
+    }
+
+    .topcontent a.topbttn{
+        font-size: 16px;
+    }
+
+    .floating{
+        padding-bottom: 80px;
+        padding-top: 120px
+    }
+
+    .floating p{
+        padding: 0 15%;
+    }
+
+    .floating .f2{
+        top: 5%;
+    }
+
+    .floating .f3{
+        left: 77%;
+    }
+
+    .floating .f4{
+        top: 85%;
+    }
+
+    .slant .imag{
+        background-size: 100% 80%;
+        background-repeat: no-repeat;
+    }
+
+    .slant .hovering{
+        top: 115%;
+        width: 40%;
+        height: 23%;
+    }
+
+    .slant .imagtext{
+        padding:  0;
+    }
+
+
+    .option .text h1{
+        font-size: 40px;
+    }
+
+    footer::before{
+        height: 120px;
+    }
+
+
 
 }
