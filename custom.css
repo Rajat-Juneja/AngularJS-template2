@@ -5,7 +5,6 @@
 
 body{
     margin: 0;
-    overflow-x: hidden;
     font-family: 'Galada', cursive;
     padding: 0;
 }
@@ -685,6 +684,10 @@ footer::before{
     
 }
 
+  body{
+        overflow-x: hidden;
+    }
+
 
 
 
@@ -755,9 +758,7 @@ footer::before{
         transform: rotate(-10deg) !important;
     }
 
-    body{
-        overflow-x: hidden;
-    }
+  
 
     footer::before{
         left: 0;
